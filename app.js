@@ -1,15 +1,28 @@
-const age = parseInt(prompt("How old are you?"));
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+const greeting = document.getElementById("greeting");
 
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
+function onLoginSubmit(event){
+    event.preventDefault();
+    const username = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    localStorage.setItem(USERNAME_KEY,username);
+    paintGreetings(username);
+}
+function paintGreetings(username){
+    greeting.innerText=`Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if(isNaN(age)|| age < 0){
-    console.log("Please write a real positive number");
-}else if(age<18){
-    console.log("Your are too young.");
-}else if(age>=18 && age < 50){
-    console.log("you can drink");
-} else if (age>50&& age<80){
-    console.log("you should excrcise!");
-}else if(age>80){
-    console.log("You can do whatever you want.");
+if(savedUsername=== null){
+    //show form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit",onLoginSubmit);
+}else{
+    paintGreetings(savedUsername);
 }
