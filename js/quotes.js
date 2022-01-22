@@ -42,9 +42,9 @@ const quotes = [
 ]
 
 const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:nth-child(2)");
+const author = document.querySelector("#quote span:nth-child(3)");
 
 const todaysQuote = quotes[Math.ceil(Math.random()*quotes.length)-1];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `명언- ${todaysQuote.quote}`;
+author.innerText = `저자- ${todaysQuote.author}`;
