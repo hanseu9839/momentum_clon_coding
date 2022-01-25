@@ -1,4 +1,4 @@
-const API_KEY = "1a2872ea97c180019f24cb65eb7bdb52";
+const API_KEY = KEY;
 
 
 function onGeoOk(position){
