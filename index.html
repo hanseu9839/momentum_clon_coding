@@ -5,9 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/11967dd8e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<header>
+   
+    <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-3x"></i></a>
+    <a href="https://www.google.co.kr/"><i class="fab fa-google fa-3x"></i></a>
+    <a href="https://www.naver.com/"><img id="naver" src="img/Naver.png"/></a>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="playerBody">
+        <img id="player_album" class="rotate"src="img/album1.png"/>
+        <audio id="musicPlayer" autoplay="true" class="hidden"controls  src="mp3/song1.mp3"></audio>
+        <div class="player_function">
+        <button id="before"><i class="fas fa-angle-double-left"></i></button>
+        <button id="play"><i class="fas fa-play"></i></button>
+        <button id="pause"><i class="fas fa-pause"></i></button>
+        <button id="next"><i  class="fas fa-angle-double-right"></i></button>
+        </div>
+    </div>
+    
+</header>
  <form class="hidden" id="login-form">
     <input required maxlength="15" type="text" placeholder="What is your name?"/>
     <input type="submit" value="Log in">
@@ -15,18 +41,23 @@
 <h2 id="clock">00:00</h2>
 <h1 id="greeting" class="hidden"></h1>
 <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Pree Enter"required/>
+    <h2>할 일 작성</h2>
+    <input type="text" required/>
 </form>
 <ul id="todo-list"></ul>
 <div id = "quote">
     <span> </span><br>
     <span> </span>
 </div>
+
+
+   
 <script src="js/clock.js"/></script>
 <script src="js/greeting.js" /></script>
 <script src="js/quotes.js" /></script>
 <script src="js/background.js" /></script>
 <script src="js/todo.js" /></script>
 <script src="js/weather.js" /></script>
+<script src="js/audio.js" /></script>
 </body>
 </html>

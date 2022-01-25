@@ -1,14 +1,131 @@
 .hidden{
     display: none;
 }
+.fa-youtube{
+    position: absolute;
+    top:0;
+    left:0;
+    color: #ff0000;
+}
+
+#login-form{
+    margin-top:50px;
+}
+#naver{
+    position: absolute;
+    width:50px;
+    height:50px;
+    z-index: 3;
+    margin: 20px;
+    left:120px;
+}
+
+.fa-google{
+    position: absolute;
+    top:0;
+    left:65px;
+    color:#defffe
+}
+
+button{
+    border: none;
+    background: none;
+}
+head{
+    display:flex;
+    justify-content: flex-end;
+}
+body{
+    font-size: 18px;
+    color:white;
+    text-align:center;
+}
+i{
+    margin:20px;
+}
+#musicPlayer{
+    width:100%;
+}
+.player_function{
+    width:100%;
+}
+#player_album{
+    position: relative;
+    left:25%;
+    width:150px;
+    height:150px;
+    border-radius:70%;
+    opacity: 100%;
+    margin-bottom: 10px;
+}
+.rotate {
+    -webkit-animation: rotation 2s infinite linear;
+            animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+    from {-ms-transform: rotate(0deg);}
+    to   {-ms-transform: rotate(359deg);}
+
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(359deg);}
+}
+#playerBody{
+    margin: 0 auto;
+    height:200px;
+    width: 300px; 
+    opacity: 80%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#clock {
+    font-weight: bold;
+    font-size: 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin:0;
+}
+#quote{
+    position: relative;
+    top:150px;
+}
+li{
+    color:antiquewhite;
+}
+
 img{
     position:absolute;
-    weight:100%;
+    width:100%;
     height:100%;
     left: 0px;
+    top: 0px;
     right:0px;
-    top:0px;
-    right:0px;
+    bottom:0px;
     z-index: -1;
-    opacity: 80%;
+    opacity:80%
+}
+ul{
+    list-style:none;
+}
+::placeholder{
+    color: white;
+}
+input{
+    width:20%;
+    background-color: transparent;
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:2 solid #fff; 
+    border-bottom-color: #fff;
+    margin-top: -20px;
+}
+#weather{
+    font: small-caps bold 24px/1 sans-serif;
+    text-align:right;
 }
