@@ -131,7 +131,7 @@ input{
     margin-top: -20px;
 }
 #weather{
-    width:20%
-    font: small-caps bold 24px/1 sans-serif;
+    width:20%;
+    font-family: small-caps bold 24px/1 sans-serif;
     text-align:right;
 }
